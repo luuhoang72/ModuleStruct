@@ -1,5 +1,6 @@
 using Module.Invoices.API.Controllers;
 using Module.Orders.API.Controllers;
+using ModuleStruct.Middlewares;
 
 namespace ModuleStruct
 {
@@ -36,8 +37,9 @@ namespace ModuleStruct
 
             app.UseHttpsRedirection();
 
-            app.UseAuthorization();
+            app.UseMiddleware<LastRequestTimeMiddleware>();
 
+            app.UseAuthorization();
 
             app.MapControllers();
 

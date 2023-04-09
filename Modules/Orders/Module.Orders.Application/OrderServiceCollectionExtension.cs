@@ -1,5 +1,6 @@
 ﻿using FluentValidation;
 using Microsoft.Extensions.Configuration;
+using Module.Orders.Application.BackgroundJobs;
 using Module.Orders.Application.Queries;
 using Module.Orders.Application.Services;
 using Module.Orders.Application.Stores;
@@ -21,6 +22,9 @@ namespace Microsoft.Extensions.DependencyInjection
 
             services.AddScoped<IOrderStore, OrderStore>();
             services.AddScoped<IOrderService, OrderService>();
+
+            services.AddSingleton<ILastRequestService, LastRequestService>();
+            services.AddHostedService<LastRequestJob>();
 
             return services;
         }
