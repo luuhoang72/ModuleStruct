@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Modules\Bases\Module.Bases.API\Module.Bases.API.csproj" />
+    <ProjectReference Include="..\Modules\Bases\Module.Bases.Application\Module.Bases.Application.csproj" />
+    <ProjectReference Include="..\Modules\Invoices\Module.Invoices.API\Module.Invoices.API.csproj" />
+    <ProjectReference Include="..\Modules\Invoices\Module.Invoices.Application\Module.Invoices.Application.csproj" />
+    <ProjectReference Include="..\Modules\Orders\Module.Orders.API\Module.Orders.API.csproj" />
+    <ProjectReference Include="..\Modules\Orders\Module.Orders.Application\Module.Orders.Application.csproj" />
+  </ItemGroup>
+
+</Project>

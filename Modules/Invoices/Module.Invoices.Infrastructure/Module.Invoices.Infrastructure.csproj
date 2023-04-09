@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Bases\Module.Bases.Infrastructure\Module.Bases.Infrastructure.csproj" />
+    <ProjectReference Include="..\Module.Invoices.Domain\Module.Invoices.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

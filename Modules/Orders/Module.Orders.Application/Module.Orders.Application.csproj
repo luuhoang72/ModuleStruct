@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Bases\Module.Bases.Application\Module.Bases.Application.csproj" />
+    <ProjectReference Include="..\Module.Orders.Domain\Module.Orders.Domain.csproj" />
+    <ProjectReference Include="..\Module.Orders.Infrastructure\Module.Orders.Infrastructure.csproj" />
+  </ItemGroup>
+
+</Project>
