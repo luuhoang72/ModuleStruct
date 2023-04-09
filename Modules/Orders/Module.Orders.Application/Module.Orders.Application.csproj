@@ -12,6 +12,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\Bases\Module.Bases.Application\Module.Bases.Application.csproj" />
+    <ProjectReference Include="..\..\Invoices\Module.Invoices.Domain\Module.Invoices.Domain.csproj" />
     <ProjectReference Include="..\Module.Orders.Domain\Module.Orders.Domain.csproj" />
     <ProjectReference Include="..\Module.Orders.Infrastructure\Module.Orders.Infrastructure.csproj" />
   </ItemGroup>

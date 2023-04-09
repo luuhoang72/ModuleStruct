@@ -30,7 +30,7 @@ namespace Module.Orders.Application.BackgroundJobs
                 if (item != null)
                 {
                     // update database
-                    Console.WriteLine("Custmer Id: {0}, time: {1}", item?.Key, item?.Value);
+                    Console.WriteLine("LastRequestJob, Customer Id: {0}, time: {1}", item?.Key, item?.Value);
                 }
                 else
                 {
