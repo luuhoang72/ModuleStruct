@@ -22,9 +22,10 @@ namespace Module.Bases.Infrastructure.Databases
             _databaseNamePrefix = databaseNamePrefix;
         }
 
-        public IMongoCollection<T> Get<T>() 
-        { 
-            return _mongoDatabase.GetCollection<T>(_databaseNamePrefix + nameof(T)); 
+        public IMongoCollection<T> Get<T>(string? name = null) 
+        {
+            var colectionName = _databaseNamePrefix + "_" + (name ?? typeof(T).Name);
+            return _mongoDatabase.GetCollection<T>(colectionName); 
         }
     }
 }

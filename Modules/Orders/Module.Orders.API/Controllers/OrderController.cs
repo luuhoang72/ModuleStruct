@@ -16,8 +16,8 @@ namespace Module.Orders.API.Controllers
             _mediator = mediator;
         }
 
-        [HttpGet]
-        public async Task<IActionResult> Get(string id)
+        [HttpGet("{id}")]
+        public async Task<IActionResult> Get([FromRoute] string id)
         {
             var rs = await _mediator.Send(new GetOrderQuery { Id = id });
             return Ok(rs);

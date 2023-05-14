@@ -22,12 +22,12 @@ namespace Module.Bases.Application.Stores
             return _collection.InsertOneAsync(entity);
         }
 
-        public Task Delete(string id)
+        public Task DeleteAsync(string id)
         {
             return _collection.DeleteOneAsync(Builders<T>.Filter.Where(x => x.Id == id));
         }
 
-        public Task<List<T>> Find(Expression<Func<T, bool>> filter)
+        public Task<List<T>> FindAsync(Expression<Func<T, bool>> filter)
         {
             return _collection.Find(filter).ToListAsync();
         }
@@ -37,7 +37,7 @@ namespace Module.Bases.Application.Stores
             return await _collection.Find(x => x.Id == id).FirstOrDefaultAsync();
         }
 
-        public Task Update(string id, T entity)
+        public Task UpdateAsync(string id, T entity)
         {
             return _collection.ReplaceOneAsync(Builders<T>.Filter.Where(x => x.Id == id), entity);
         }

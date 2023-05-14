@@ -15,8 +15,8 @@ namespace Module.Invoices.API.Controllers
             _mediator = mediator;
         }
 
-        [HttpGet]
-        public async Task<IActionResult> Get(string id)
+        [HttpGet("{id}")]
+        public async Task<IActionResult> Get([FromRoute] string id)
         {
             var rs = await _mediator.Send(new GetInvoiceQuery { Id = id });
             return Ok(rs);

@@ -1,4 +1,5 @@
 using Module.Invoices.API.Controllers;
+using Module.Members.API.Controllers;
 using Module.Orders.API.Controllers;
 using ModuleStruct.Middlewares;
 
@@ -14,12 +15,14 @@ namespace ModuleStruct
 
             builder.Services
                 .AddControllers()
-                .AddControllers<OrderController>()
                 .AddControllers<InvoiceController>()
+                .AddControllers<MemberController>()
+                .AddControllers<OrderController>()
                 ;
 
             builder.Services.AddBasesServices(builder.Configuration);
             builder.Services.AddOrdersServices(builder.Configuration);
+            builder.Services.AddMembersServices(builder.Configuration);
             builder.Services.AddInvoicesServices(builder.Configuration);
 
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
