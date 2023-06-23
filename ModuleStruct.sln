@@ -47,6 +47,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Module.Members.Application"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Module.Members.API", "Modules\Members\Module.Members.API\Module.Members.API.csproj", "{1848D7E3-DFD6-4052-8980-27DED9D03080}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{F71236B5-DB4E-405A-819F-400D422BCC43}"
+	ProjectSection(SolutionItems) = preProject
+		apprunner.yaml = apprunner.yaml
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
