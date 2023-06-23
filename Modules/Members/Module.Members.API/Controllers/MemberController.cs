@@ -16,8 +16,15 @@ namespace Module.Members.API.Controllers
             _mediator = mediator;
         }
 
+        [HttpGet]
+        public async Task<IActionResult> GetAll([FromRoute] GetMemberAllQuery query)
+        {
+            var rs = await _mediator.Send(query);
+            return Ok(rs);
+        }
+
         [HttpGet("{id}")]
-        public async Task<IActionResult> Get([FromRoute] string id)
+        public async Task<IActionResult> GetById([FromRoute] string id)
         {
             var rs = await _mediator.Send(new GetMemberQuery { Id = id });
             return Ok(rs);
