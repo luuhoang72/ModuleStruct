@@ -13,6 +13,8 @@ namespace ModuleStruct
 
             // Add services to the container.
 
+            builder.Services.AddHealthChecks();
+
             builder.Services
                 .AddControllers()
                 .AddControllers<InvoiceController>()
@@ -30,6 +32,8 @@ namespace ModuleStruct
             builder.Services.AddSwaggerGen();
 
             var app = builder.Build();
+
+            app.MapHealthChecks("/health");
 
             // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())
